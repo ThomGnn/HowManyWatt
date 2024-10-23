@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #002d5f; /* Bleu foncé */
+    color: white;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    margin-bottom: 2rem;
+}
+
+.summary h2 {
+    font-size: 1.8rem;
+    color: #002d5f;
+    margin-bottom: 1rem;
+}
+
+.energy-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.energy-item {
+    background-color: #d9e6f2; /* Bleu léger */
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.energy-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #002d5f;
+}
+
+.energy-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #002d5f;
+}
+
+.form-section {
+    margin-top: 2rem;
+}
+
+.form-section h2 {
+    font-size: 1.8rem;
+    color: #002d5f;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    color: #333;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    padding-right: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.currency-symbol {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+button {
+    padding: 0.7rem;
+    background-color: #002d5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #002d5f;
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .summary h2, .form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .energy-item h3 {
+        font-size: 1rem;
+    }
+
+    .energy-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .summary h2, .form-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .energy-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .energy-item p {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+.star {
+    font-size: 24px; /* Ajuste la taille des étoiles si nécessaire */
+    cursor: pointer;
+}
+
+.rating {
+    color: gold; /* Couleur pour les étoiles remplies */
+}
+
+.review-container {
+    background-color: #e0f7fa; /* Bleu pâle */
+    border: 1px solid #b2ebf2; /* Bordure bleue claire */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.review {
+    margin: 10px 0;
+}
+
+.electricity-transactions,
+.water-transactions,
+.gas-transactions,
+.fuel-transactions {
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.electricity-transactions li,
+.water-transactions li,
+.gas-transactions li,
+.fuel-transactions li {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+
+

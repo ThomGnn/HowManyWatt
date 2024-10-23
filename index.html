@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Décomptez vos recettes et dépenses d'énergie pour l'eau, l'électricité, le gaz, et le fuel">
+    <title>HowManyWatt - Gestion des énergies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>HowManyWatt</h1>
+        <p>Suivez vos recettes et dépenses d'énergies</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <h2>Résumé Énergétique</h2>
+            <div class="energy-stats">
+                <div class="energy-item">
+                    <h3>Électricité</h3>
+                    <p>Dépenses : <span class="electricity-expense">0</span> €</p>
+                    <p>Recettes : <span class="electricity-revenue">0</span> €</p>
+                    <p>Total : <span class="electricity-total">0</span> €</p><br>
+                    <button class="electricity-view-transactions">Voir les transactions</button>
+                    <ul class="electricity-transactions" style="display: none;"></ul>
+                    <div class="electricity-transaction-section" style="display: none;"></div>
+                </div>
+
+                <div class="energy-item">
+                    <h3>Eau</h3>
+                    <p>Dépenses : <span class="water-expense">0</span> €</p>
+                    <p>Recettes : <span class="water-revenue">0</span> €</p>
+                    <p>Total : <span class="water-total">0</span> €</p><br>
+                    <button class="water-view-transactions">Voir les transactions</button>
+                    <ul class="water-transactions" style="display: none;"></ul>
+                    <div class="water-transaction-section" style="display: none;"></div>
+                </div>
+                <div class="energy-item">
+                    <h3>Gaz</h3>
+                    <p>Dépenses : <span class="gas-expense">0</span> €</p>
+                    <p>Recettes : <span class="gas-revenue">0</span> €</p>
+                    <p>Total : <span class="gas-total">0</span> €</p><br>
+                    <button class="gas-view-transactions">Voir les transactions</button>
+                    <ul class="gas-transactions" style="display: none;"></ul>
+                    <div class="gas-transaction-section" style="display: none;"></div>
+                </div>
+                <div class="energy-item">
+                    <h3>Fuel</h3>
+                    <p>Dépenses : <span class="fuel-expense">0</span> €</p>
+                    <p>Recettes : <span class="fuel-revenue">0</span> €</p>
+                    <p>Total : <span class="fuel-total">0</span> €</p><br>
+                    <button class="fuel-view-transactions">Voir les transactions</button>
+                    <ul class="fuel-transactions" style="display: none;"></ul>
+                    <div class="fuel-transaction-section" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Ajouter une nouvelle entrée</h2>
+            <form id="energy-form">
+                <label for="energy-type">Type d'énergie :</label>
+                <select id="energy-type">
+                    <option value="electricity">Électricité</option>
+                    <option value="water">Eau</option>
+                    <option value="gas">Gaz</option>
+                    <option value="fuel">Fuel</option>
+                </select>
+
+                <label for="entry-type">Type d'entrée :</label>
+                <select id="entry-type">
+                    <option value="expense">Dépense</option>
+                    <option value="revenue">Recette</option>
+                </select>
+
+                <label for="amount">Montant :</label>
+                <div class="input-wrapper">
+                    <input type="number" id="amount" placeholder="Entrez le montant" required>
+                    <span class="currency-symbol">€</span>
+                </div>
+
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+        <br>
+        <div class="container1">
+            <h2>Avis sur le fournisseur d'énergies</h2><br>
+
+            <div id="reviews"></div>
+
+            <div class="letAdvice" id="adviceBtn">
+                <h4>Clique pour laisser un avis</h4><br>
+            </div>
+
+            <div id="commentSection" style="display: none;">
+                <form id="commentForm">
+                    <label for="provider-name">Nom du fournisseur:</label>
+                    <input type="text" id="provider-name" name="provider-name" required>
+
+
+                    <label for="pseudo">Pseudo:</label>
+                    <input type="text" id="pseudo" name="pseudo" required>
+
+                    <label for="rating">Note:</label>
+                    <div id="rating">
+                        <span class="star" data-rating="1">&#9734;</span>
+                        <span class="star" data-rating="2">&#9734;</span>
+                        <span class="star" data-rating="3">&#9734;</span>
+                        <span class="star" data-rating="4">&#9734;</span>
+                        <span class="star" data-rating="5">&#9734;</span>
+                    </div>
+
+                    <label for="comment">Commentaire:</label>
+                    <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+
+                    <input type="submit" id="sendBtn" value="Envoyer">
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HowManyWatt - Gestion des énergies</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="script4.js"></script>
+</body>
+
+</html>
